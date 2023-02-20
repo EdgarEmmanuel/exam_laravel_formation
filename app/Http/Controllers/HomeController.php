@@ -97,14 +97,23 @@ class HomeController extends Controller
                     formations INNER JOIN referentiels ON formations.referentiel_id = referentiels.id INNER JOIN types ON types.id = referentiels.type_id
                             GROUP BY referentiel_id , formations.nom, types.libelle") ;
 
-        //dd($number_of_formation_by_type);
+        
+        
+        $ages = DB::table('candidats')
+                ->select(DB::raw('age'))
+                ->pluck("age");
+
+        $labels_ages = $ages->keys();
+        $data_ages = $ages->values();
 
         return view("pages.stats_age", 
             [
                 "number_of_candidate_by_formation" => $number_of_candidate_by_formation,
                 "number_of_formation_by_referentiel" => $number_of_formation_by_referentiel,
                 "number_of_candidat_by_sexe" => $number_of_candidat_by_sexe,
-                "number_of_formation_by_type" => $number_of_formation_by_type
+                "number_of_formation_by_type" => $number_of_formation_by_type,
+                "data_ages" => $data_ages,
+                "labels_ages" => $labels_ages
             ]
         );
     }

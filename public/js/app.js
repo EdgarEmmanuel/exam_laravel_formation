@@ -2111,23 +2111,35 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ "./node_modules/chart.js/auto/auto.js");
 
-var ctx = document.getElementById("myChart");
-new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__["default"](ctx, {
-  // The type of chart we want to create
-  type: "line",
-  // The data for our dataset
-  data: {
-    labels: ["2015", "2016", "2017", "2018"],
-    datasets: [{
-      label: "Earnings",
-      backgroundColor: "rgba(255, 255, 255, 0)",
-      borderColor: "rgba(26, 188, 138, 1)",
-      data: [0, 1000, 0.00046, -100.01]
-    }]
-  },
-  // Configuration options go here
-  options: {}
+
+/*
+let ctx = document.getElementById("myChart");
+
+//var ages =  {{ Js::from($ages) }};
+new Chart(ctx, {
+	// The type of chart we want to create
+	type: "line",
+
+	// The data for our dataset
+	data: {
+		labels: ["2015", "2016", "2017", "2018"],
+		datasets: [
+			{
+				label: "Ages",
+				backgroundColor: "rgba(255, 255, 255, 0)",
+				borderColor: "rgba(26, 188, 138, 1)",
+				data: [0, 1000, 0.00046, -100.01]
+			}
+		]
+	},
+
+
+
+	// Configuration options go here
+	options: {}
 });
+
+*/
 
 /***/ }),
 

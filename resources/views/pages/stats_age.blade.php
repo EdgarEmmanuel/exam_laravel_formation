@@ -45,3 +45,39 @@
 
 
 @endsection
+
+
+
+@section("js")
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script type="text/javascript">
+    //import Chart from 'chart.js/auto';
+
+
+    let ctx = document.getElementById("myChart");
+
+    let ages =  {{ Js::from($data_ages) }};
+    let labels = {{ Js::from($labels_ages) }}
+
+    new Chart(ctx, {
+        // The type of chart we want to create
+        type: "line",
+
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Age Dataset",
+                    backgroundColor: "rgba(255, 99, 132)",
+                    borderColor: "rgba(255, 99, 132)",
+                    data: ages
+                }
+            ]
+        },
+
+        // Configuration options go here
+        options: {}
+});
+</script>
+@endsection
