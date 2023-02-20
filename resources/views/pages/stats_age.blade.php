@@ -68,7 +68,7 @@
             labels: labels,
             datasets: [
                 {
-                    label: "Age Dataset",
+                    label: "Tranche D'age",
                     backgroundColor: "rgba(255, 99, 132)",
                     borderColor: "rgba(255, 99, 132)",
                     data: ages
