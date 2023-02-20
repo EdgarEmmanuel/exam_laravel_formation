@@ -34,7 +34,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput2">L'Age</label>
-            <input class="form-control" id="exampleFormControlInput2" placeholder="L'age" min="10" max="99" name="age" 
+            <input class="form-control" id="exampleFormControlInput2" placeholder="L'age" min="10" max="35" name="age" 
             type="number" tabindex="1" required/>
         </div>
         <div class="form-group">
