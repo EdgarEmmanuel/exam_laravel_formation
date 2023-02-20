@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ HomeController, TypeController };
+use App\Http\Controllers\{ HomeController, TypeController, ReferentielController };
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +29,4 @@ Route::get('/referentiels', [HomeController::class, 'PageReferentiel']);
 
 
 Route::post("/register_type", [TypeController::class, "createOneType"]);
+Route::post("/register_referentiel", [ReferentielController::class, "createOneReferentiel"]);

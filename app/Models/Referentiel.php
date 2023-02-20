@@ -15,7 +15,7 @@ class Referentiel extends Model
     protected $fillable = [
         "libelle",
         "type_id",
-        "is_validated"
+        "validated"
     ];
 
 
