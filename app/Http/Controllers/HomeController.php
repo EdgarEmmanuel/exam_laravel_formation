@@ -44,7 +44,7 @@ class HomeController extends Controller
 
 
     public function PageFormation(){
-        $formations = DB::table("formations")->paginate(5);
+        $formations = Formation::with("referentiel")->paginate(5);
         
         $referentiels = Referentiel::all();
         $number = count(Formation::all());

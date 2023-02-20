@@ -24,8 +24,8 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput2">La Duree de la formation</label>
-            <input class="form-control" id="exampleFormControlInput2" placeholder="Duree" name="duree" type="number" 
-            tabindex="1" required/>
+            <input class="form-control" id="exampleFormControlInput2" placeholder="Duree ( minutes )" name="duree" min="10"
+             type="number" tabindex="1" required/>
         </div>
         <div class="form-group">
             <label for="exampleFormControlInput2">Date Debut de la formation</label>
@@ -50,7 +50,7 @@
             </select>
         </div>
         <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" name="is_validated" value="true" id="exampleCheck1">
+            <input type="checkbox" class="form-check-input" name="is_started" value="true" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Le Referentiel a commencé ?</label>
         </div>
         <fieldset>
@@ -79,9 +79,9 @@
             @foreach($formations as $r )
                 <tr>
                     <th scope="row"> {{ $r->id }} </th>
-                    <td>{{ $r->libelle }}</td>
+                    <td>{{ $r->nom }}</td>
                     <td>{{ $r->description }}</td>
-                    <td>{{ $r->referentiel_id }}</td>
+                    <td>{{ $r->referentiel->libelle }}</td>
                     <td>{{ $r->date_debut }}</td>
                     <td>{{ $r->is_started == 0 ? "oui" : "non" }}</td>
                 </tr>

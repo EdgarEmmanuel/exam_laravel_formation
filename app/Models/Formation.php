@@ -12,6 +12,16 @@ class Formation extends Model
     use HasFactory;
 
 
+    protected $fillable = [
+                "is_started",
+                "nom",
+                "referentiel_id",
+                "description",
+                "date_debut",
+                "duree"
+    ];
+
+
     /**
      * One Formation Belongs to One Referentiel
      */
