@@ -42,6 +42,10 @@
                     <i class="fa fa-book"></i>
                     Referentiels
                 </a>
+                <a href="/formations">
+                    <i class="fa fa-book"></i>
+                    Formations
+                </a>
                 <a href="">
                     <i class="fa fa-newspaper-o"></i>
                     News

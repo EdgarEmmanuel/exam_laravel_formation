@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ HomeController, TypeController, ReferentielController };
+use App\Http\Controllers\{ HomeController, TypeController, ReferentielController , FormationController};
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +19,8 @@ Route::get('/', [HomeController::class, 'Home']);
 
 
 Route::get('/types', [HomeController::class, 'PageType']);
-
 Route::get('/referentiels', [HomeController::class, 'PageReferentiel']);
+Route::get('/formations', [HomeController::class, 'PageFormation']);
 
 
 
@@ -30,3 +30,4 @@ Route::get('/referentiels', [HomeController::class, 'PageReferentiel']);
 
 Route::post("/register_type", [TypeController::class, "createOneType"]);
 Route::post("/register_referentiel", [ReferentielController::class, "createOneReferentiel"]);
+Route::post("/register_formation", [FormationController::class, "createOneFormation"]);
