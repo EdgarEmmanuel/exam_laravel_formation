@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use  App\Models\Type;
+use  App\Models\ { Type, Referentiel };
 
 
 class HomeController extends Controller
@@ -22,6 +22,19 @@ class HomeController extends Controller
         return view("pages.type", [
             "types" => $types,
             "number" => count($types)
+        ]);
+    }
+
+
+
+
+    public function PageReferentiel(){
+        $referentiels = Referentiel::all();
+        $number = count($referentiels);
+
+        return view("pages.referentiel", [
+            "referentiels" => $referentiels,
+            "number" => $number,
         ]);
     }
 

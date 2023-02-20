@@ -38,9 +38,9 @@
                     <i class="fa fa-tasks"></i>
                     Types
                 </a>
-                <a href="">
+                <a href="/referentiels">
                     <i class="fa fa-book"></i>
-                    Invoice Tool
+                    Referentiels
                 </a>
                 <a href="">
                     <i class="fa fa-newspaper-o"></i>

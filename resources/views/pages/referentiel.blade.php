@@ -7,7 +7,7 @@
     <div class="blok">
         <i class="fa fa-money"></i>
         <div class="no">
-            <p>Nombre de Types de Referentiels </p>
+            <p>Nombre de Referentiels</p>
             <p>{{ $number }}</p>
         </div>
     </div>
@@ -39,10 +39,10 @@
           </tr>
         </thead>
         <tbody>
-            @foreach($types as $t )
+            @foreach($referentiels as $r )
                 <tr>
-                    <th scope="row"> {{ $t->id }} </th>
-                    <td>{{ $t->libelle }}</td>
+                    <th scope="row"> {{ $r->id }} </th>
+                    <td>{{ $r->libelle }}</td>
                 </tr>
             @endforeach
         </tbody>

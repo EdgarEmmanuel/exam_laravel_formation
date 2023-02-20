@@ -20,4 +20,12 @@ Route::get('/', [HomeController::class, 'Home']);
 
 Route::get('/types', [HomeController::class, 'PageType']);
 
+Route::get('/referentiels', [HomeController::class, 'PageReferentiel']);
+
+
+
+
+
+
+
 Route::post("/register_type", [TypeController::class, "createOneType"]);
