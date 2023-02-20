@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/app.css" />
 
 
-        @yield("js")
+        @yield("css")
     </head>
     <body class="antialiased">
 
@@ -49,14 +49,14 @@
         </div>
         
         <div class="dashboard-heading">
-            <div class="panel">
+            {{-- <div class="panel">
                 <i class="fa fa-bell">
                     <b>1</b>
                 </i>
                 <div ng-app="app" ng-controller="coin">
                     <p class="btc-price">priceGBP</p>
                 </div>
-            </div>
+            </div> --}}
             <div class="all">
                 
                 @yield("main")

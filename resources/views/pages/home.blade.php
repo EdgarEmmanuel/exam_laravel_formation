@@ -2,38 +2,18 @@
 
 
 
+@section("css")
+ <style>
+    img{
+        border-radius: 10px;
+    }
+ </style>
+@endsection
+
+
 @section("main")
 
-
-<div class="starter-stats">
-    <div class="blok">
-        <i class="fa fa-money"></i>
-        <div class="no">
-            <p>Asset Types</p>
-            <p>3</p>
-        </div>
-    </div>
-
-    <div class="blok">
-        <i class="fa fa-money kl"></i>
-        <div class="no">
-            <p>Total Gains</p>
-            <p>-100.01 BLONION</p>
-        </div>
-    </div>
-
-    <div class="blok">
-        <i class="fa fa-money pl"></i>
-        <div class="no">
-            <p>Longest HODL</p>
-            <p>8 Months</p>
-        </div>
-    </div>
-    <div class="clear"></div>
-    <div class="gains">
-        <canvas id="myChart"></canvas>
-    </div>
-
-</div>
+<img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+ alt="" />
 
 @endsection
