@@ -15,10 +15,28 @@
 
 
 <div class="container">
-    <form method="post" action="/register_type">
+    <form method="post" action="/register_referentiel">
         @csrf
         <div class="form-group">
-          <input class="form-control" placeholder="Le Nom" name="nom" type="text" tabindex="1" required/>
+            <label for="exampleFormControlInput1">Le libelle</label>
+          <input class="form-control" id="exampleFormControlInput1" placeholder="Le Libelle" name="libelle" type="text" tabindex="1" required/>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Le Type du Referentiel</label>
+            <select class="form-control" name="type_id" id="exampleFormControlSelect1">
+              <option type="">...</option>
+              @foreach($types as $type)
+  
+                <option value="{{ $type->id }}">
+                    {{ $type->libelle }}
+                </option>
+  
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" name="is_validated" value="true" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Le Referentiel est validé ?</label>
         </div>
         <fieldset>
           <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">

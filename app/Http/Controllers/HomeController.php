@@ -29,11 +29,14 @@ class HomeController extends Controller
 
 
     public function PageReferentiel(){
+        
         $referentiels = Referentiel::all();
+        $types = Type::all();
         $number = count($referentiels);
 
         return view("pages.referentiel", [
             "referentiels" => $referentiels,
+            "types" => $types,
             "number" => $number,
         ]);
     }

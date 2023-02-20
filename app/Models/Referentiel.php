@@ -12,6 +12,13 @@ class Referentiel extends Model
     use HasFactory;
 
 
+    protected $fillable = [
+        "libelle",
+        "type_id",
+        "is_validated"
+    ];
+
+
     /**
      * One Referentiel CAN have many Formation
      */
