@@ -35,7 +35,7 @@ class Formation extends Model
 
     public function candidats(): BelongsToMany
     {
-        return $this->belongsToMany(Candidat::class);
+        return $this->belongsToMany(Candidat::class, "candidat_formation");
     }
 
 

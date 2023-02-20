@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ HomeController, TypeController, ReferentielController , FormationController};
+use App\Http\Controllers\{ HomeController, TypeController, ReferentielController , FormationController, CandidatController};
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +31,4 @@ Route::get('/candidats', [HomeController::class, 'PageCandidat']);
 Route::post("/register_type", [TypeController::class, "createOneType"]);
 Route::post("/register_referentiel", [ReferentielController::class, "createOneReferentiel"]);
 Route::post("/register_formation", [FormationController::class, "createOneFormation"]);
+Route::post("/register_candidat", [CandidatController::class, "createOneCandidat"]);

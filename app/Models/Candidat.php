@@ -10,9 +10,18 @@ class Candidat extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "nom",
+        "prenom",
+        "age",
+        "email",
+        "niveau_etude",
+        "sexe"
+    ];
+
 
     public function formations(): BelongsToMany
     {
-        return $this->belongsToMany(Formation::class);
+        return $this->belongsToMany(Formation::class, "candidat_formation");
     }
 }

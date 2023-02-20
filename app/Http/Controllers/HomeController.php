@@ -29,7 +29,7 @@ class HomeController extends Controller
 
 
     public function PageReferentiel(){
-        $referentiels = DB::table("referentiels")->paginate(5);
+        $referentiels = Referentiel::with("type")->paginate(5);
         
         $types = Type::all();
         $number = count(Referentiel::all());

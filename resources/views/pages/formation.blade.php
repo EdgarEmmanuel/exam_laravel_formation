@@ -83,7 +83,7 @@
                     <td>{{ $r->description }}</td>
                     <td>{{ $r->referentiel->libelle }}</td>
                     <td>{{ $r->date_debut }}</td>
-                    <td>{{ $r->is_started == 0 ? "oui" : "non" }}</td>
+                    <td>{{ $r->is_started == 0 ? "non" : "oui" }}</td>
                 </tr>
             @endforeach
         </tbody>

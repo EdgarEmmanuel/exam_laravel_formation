@@ -16,7 +16,7 @@
 
 
 <div class="container">
-    <form method="post" action="/register_formation">
+    <form method="post" action="/register_candidat">
         @csrf
         <div class="form-group">
           <input class="form-control" id="exampleFormControlInput1" placeholder="Le Nom" name="nom" type="text" 
@@ -44,7 +44,7 @@
         </div>
         <div class="form-group">
             <label for="exampleFormControlSelect1">La Formation</label>
-            <select class="form-control" name="referentiel_id" id="exampleFormControlSelect1" required>
+            <select class="form-control" name="formation_id[]" id="exampleFormControlSelect1" required multiple>
               <option type="">...</option>
               @foreach($formations as $f)
   
