@@ -22,11 +22,19 @@
     </div>
 
     <div class="blok">
-        <i class="fa fa-money pl"></i>
-        <div class="no">
-            <p>Longest HODL</p>
-            <p>8 Months</p>
-        </div>
+        <h3>Nombre de Candidats Par Sexe</h3>
+
+        @foreach($number_of_candidat_by_sexe as $item)
+            <p>Pour le sexe <b>{{$item->sexe}}</b> il y'a {{$item->number_of_candidates}} de candidat(s). <br/> 
+        @endforeach
+    </div>
+
+    <div class="blok">
+        <h3>Nombre de Candidats Par Sexe</h3>
+
+        @foreach($number_of_candidat_by_sexe as $item)
+            <p>Pour le sexe <b>{{$item->sexe}}</b> il y'a {{$item->number_of_candidates}} de candidat(s). <br/> 
+        @endforeach
     </div>
     <div class="clear"></div>
     <div class="gains">

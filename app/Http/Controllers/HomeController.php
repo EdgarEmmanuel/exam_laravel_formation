@@ -90,8 +90,8 @@ class HomeController extends Controller
 
         $number_of_candidat_by_sexe = DB::select("SELECT DISTINCT sexe , COUNT(id) as number_of_candidates FROM `candidats` GROUP BY sexe");
 
-        
-        dd($number_of_candidat_by_sexe);
+
+        //dd($number_of_candidat_by_sexe);
 
         $number_of_formation_by_type = DB::select("SELECT DISTINCT formations.referentiel_id , COUNT(formations.id) as number_of_formations, types.libelle as type_referentiel FROM 
                     formations INNER JOIN referentiels ON formations.referentiel_id = referentiels.id INNER JOIN types ON types.id = referentiels.type_id
