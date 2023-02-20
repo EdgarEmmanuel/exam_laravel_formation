@@ -91,6 +91,7 @@
             <th scope="col">Email</th>
             <th scope="col">Age ( Sexe ) </th>
             <th scope="col">Niveau Etude</th>
+            <th scope="col" colspan="2">Formation(s)</th>
           </tr>
         </thead>
         <tbody>
@@ -101,6 +102,9 @@
                     <td>{{ $r->email }}</td>
                     <td>{{ $r->age }} ( {{ $r->sexe }} )</td>
                     <td>{{ $r->niveau_etude }}</td>
+                    @foreach($r->formations as $rf)
+                        <td>Formation {{ $rf->nom }}</td>
+                    @endforeach
                 </tr>
             @endforeach
         </tbody>
