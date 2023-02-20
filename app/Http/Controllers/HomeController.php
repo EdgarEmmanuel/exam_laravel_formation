@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use  App\Models\ { Type, Referentiel, Formation };
+use  App\Models\ { Type, Referentiel, Formation, Candidat };
 use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
@@ -52,6 +52,22 @@ class HomeController extends Controller
         return view("pages.formation", [
             "referentiels" => $referentiels,
             "formations" => $formations,
+            "number" => $number,
+        ]);
+    }
+
+
+
+
+    public function PageCandidat(){
+        $candidats = Candidat::paginate(5);
+        
+        $formations = Formation::all();
+        $number = count(Candidat::all());
+
+        return view("pages.candidat", [
+            "formations" => $formations,
+            "candidats" => $candidats,
             "number" => $number,
         ]);
     }

@@ -16,11 +16,11 @@ use App\Http\Controllers\{ HomeController, TypeController, ReferentielController
 
 
 Route::get('/', [HomeController::class, 'Home']);
-
-
 Route::get('/types', [HomeController::class, 'PageType']);
 Route::get('/referentiels', [HomeController::class, 'PageReferentiel']);
 Route::get('/formations', [HomeController::class, 'PageFormation']);
+Route::get('/candidats', [HomeController::class, 'PageCandidat']);
+
 
 
 

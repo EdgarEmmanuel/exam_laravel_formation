@@ -46,9 +46,9 @@
                     <i class="fa fa-book"></i>
                     Formations
                 </a>
-                <a href="">
-                    <i class="fa fa-newspaper-o"></i>
-                    News
+                <a href="/candidats">
+                    <i class="fa fa-users"></i>
+                    Candidats
                 </a>
                 <a href="">
                     <i class="fa fa-money"></i>
