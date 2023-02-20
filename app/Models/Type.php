@@ -10,6 +10,11 @@ class Type extends Model
 {
     use HasFactory;
 
+
+    protected $fillable = [
+        "libelle"
+    ];
+
     public function referentiels(): HasMany
     {
         return $this->hasMany(Referentiel::class);

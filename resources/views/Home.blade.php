@@ -6,7 +6,12 @@
 
         <title>FORMATION | APP</title>
 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
         <link rel="stylesheet" href="css/app.css" />
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
 
         @yield("css")
@@ -24,14 +29,14 @@
             </div>
             <div class="clear"></div>
             <ul class="menu">
-                <a href="">
+                <a href="/">
                     <i class="fa fa-dashboard"></i>
                     Dashboard
                 </a>
                 <br>
-                <a href="">
+                <a href="/types">
                     <i class="fa fa-tasks"></i>
-                    Transactions
+                    Types
                 </a>
                 <a href="">
                     <i class="fa fa-book"></i>

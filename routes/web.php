@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{ HomeController };
+use App\Http\Controllers\{ HomeController, TypeController };
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +16,8 @@ use App\Http\Controllers\{ HomeController };
 
 
 Route::get('/', [HomeController::class, 'Home']);
+
+
+Route::get('/types', [HomeController::class, 'PageType']);
+
+Route::post("/register_type", [TypeController::class, "createOneType"]);
