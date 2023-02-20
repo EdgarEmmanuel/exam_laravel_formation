@@ -47,6 +47,7 @@
             @endforeach
         </tbody>
     </table>
+    {{ $types->links() }}
 </div>
 
 

@@ -64,12 +64,13 @@
                 <tr>
                     <th scope="row"> {{ $r->id }} </th>
                     <td>{{ $r->libelle }}</td>
-                    <td>{{ $r->type->libelle }}</td>
+                    <td>{{ $r->type_id }}</td>
                     <td>{{ $r->validated == 0 ? "oui" : "non" }}</td>
                 </tr>
             @endforeach
         </tbody>
     </table>
+    {{ $referentiels->links() }}
 </div>
 
 
