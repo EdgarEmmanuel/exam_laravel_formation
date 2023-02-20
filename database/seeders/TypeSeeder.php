@@ -25,10 +25,10 @@ class TypeSeeder extends Seeder
 
 
         foreach($types as $type){
-            $data = DB::select('select * from types where name = ?', [$type]);
+            $data = DB::select('select * from types where libelle = ?', [$type]);
 
             if($data == null){
-                DB::table('matieres')->insert([
+                DB::table('types')->insert([
                     'libelle' => $type,
                 ]);
             }
