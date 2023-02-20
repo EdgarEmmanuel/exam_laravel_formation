@@ -50,9 +50,9 @@
                     <i class="fa fa-users"></i>
                     Candidats
                 </a>
-                <a href="">
-                    <i class="fa fa-money"></i>
-                    Donate
+                <a href="/statistiques">
+                    <i class="fa fa-bar-chart"></i>
+                    Statistiques
                 </a>
             </ul>
         </div>

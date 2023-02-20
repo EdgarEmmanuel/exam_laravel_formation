@@ -75,4 +75,40 @@ class HomeController extends Controller
 
 
 
+    public function PageStats(){
+        $number_of_candidate_by_formation = DB::select(" select  distinct formation_id , COUNT(candidat_id) as numbers_candidats, nom as libelle_formation 
+                                            FROM candidat_formation ca INNER JOIN formations f ON ca.formation_id = f.id 
+                                                    GROUP BY formation_id, nom ;") ;
+
+                                                 
+
+        $number_of_formation_by_referentiel = DB::select("SELECT DISTINCT referentiel_id, COUNT(formations.id) as number_formations, referentiels.libelle FROM 
+                                                                        formations INNER JOIN referentiels ON 
+                                                                formations.referentiel_id = referentiels.id GROUP BY referentiel_id , referentiels.libelle");
+
+
+
+        $number_of_candidat_by_sexe = DB::select("SELECT DISTINCT sexe , COUNT(id) as number_of_candidates FROM `candidats` GROUP BY sexe");
+
+        
+        dd($number_of_candidat_by_sexe);
+
+        $number_of_formation_by_type = DB::select("SELECT DISTINCT formations.referentiel_id , COUNT(formations.id) as number_of_formations, types.libelle as type_referentiel FROM 
+                    formations INNER JOIN referentiels ON formations.referentiel_id = referentiels.id INNER JOIN types ON types.id = referentiels.type_id
+                            GROUP BY referentiel_id , formations.nom, types.libelle") ;
+
+
+        return view("pages.stats_age", 
+            [
+                "number_of_candidate_by_formation" => $number_of_candidate_by_formation,
+                "number_of_formation_by_referentiel" => $number_of_formation_by_referentiel,
+                "number_of_candidat_by_sexe" => $number_of_candidat_by_sexe,
+                "number_of_formation_by_type" => $number_of_formation_by_type
+            ]
+        );
+    }
+
+
+
+
 }

@@ -6,19 +6,19 @@
 
 <div class="starter-stats">
     <div class="blok">
-        <i class="fa fa-money"></i>
-        <div class="no">
-            <p>Asset Types</p>
-            <p>3</p>
-        </div>
+        <h3>Nombre de Candidats Par Formation</h3>
+
+        @foreach($number_of_candidate_by_formation as $item)
+            <p>Pour la formation <b>{{$item->libelle_formation}}</b> il y'a {{$item->numbers_candidats}} de candidat(s). <br/> 
+        @endforeach
     </div>
 
     <div class="blok">
-        <i class="fa fa-money kl"></i>
-        <div class="no">
-            <p>Total Gains</p>
-            <p>-100.01 BLONION</p>
-        </div>
+        <h3>Nombre de Formations Par Referentiel</h3>
+
+        @foreach($number_of_formation_by_referentiel as $item)
+            <p>Pour le referentiel <b>{{$item->libelle}}</b> il y'a {{$item->number_formations}} de formation(s). <br/> 
+        @endforeach
     </div>
 
     <div class="blok">
